@@ -24,21 +24,21 @@
                     <DataTemplate>
                         <Grid ColumnDefinitions="*,2*">
                             <Entry
-                                        Grid.Column="0"
-                                        FontSize="10"
-                                        HorizontalOptions="Start"
-                                        HorizontalTextAlignment="Start"
-                                        Text="{Binding PreferencePrompt, Mode=TwoWay}"
-                                        TextColor="{OnPlatform Black,iOS=White}" />
+                                Grid.Column="0"
+                                FontSize="10"
+                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Start"
+                                Text="{Binding PreferencePrompt, Mode=TwoWay}"
+                                TextColor="{OnPlatform Black,iOS=White}" />
                             <Entry
-                                        Grid.Column="1"
-                                        FontSize="10"
-                                        HeightRequest="32"
-                                        HorizontalOptions="Start"
-                                        HorizontalTextAlignment="Start"
-                                        Text="{Binding PreferenceValue, Mode=TwoWay}"
-                                        TextColor="{OnPlatform Black, iOS=White}"
-                                        WidthRequest="350" />
+                                Grid.Column="1"
+                                FontSize="10"
+                                HeightRequest="32"
+                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Start"
+                                Text="{Binding PreferenceValue, Mode=TwoWay}"
+                                TextColor="{OnPlatform Black, iOS=White}"
+                                WidthRequest="350" />
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

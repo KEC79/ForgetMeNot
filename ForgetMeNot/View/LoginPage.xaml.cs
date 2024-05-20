@@ -58,26 +58,26 @@ public partial class LoginPage : ContentPage
 
     public static ProgressBar? LoginProgressBar;
 
-    //private async void OnSubmit(object sender, EventArgs e)
-    //{
-    //    for (double i = 0.0; i < 1.0; i += 0.1)
-    //        {
-    //            await LoginProgressBar.ProgressTo(i, 500, Easing.Linear);
-    //        }
-    //    await DisplayAlert(
-    //        "Submit",
-    //        $"You entered {vm.Name} and {vm.Password}",
-    //        "OK");
-    //}
+    private async void OnSubmit(object sender, EventArgs e)
+    {
+        for (double i = 0.0; i < 1.0; i += 0.1)
+        {
+            await LoginProgressBar.ProgressTo(i, 500, Easing.Linear);
+        }
+        await DisplayAlert(
+            "Submit",
+            $"You entered {vm.Name} and {vm.Password}",
+            "OK");
+    }
 
-    //private async void OnForgotPassword(object sender, EventArgs e)
-    //{
-    //    CreateAccount.Text = (await DisplayActionSheet(
-    //      "How can we solve this?",
-    //      "Cancel",
-    //      null,
-    //      "Get new password",
-    //      "Show me my hint",
-    //      "Delete account"));
-    //}
+    private async void OnForgotPassword(object sender, EventArgs e)
+    {
+        CreateAccount.Text = (await DisplayActionSheet(
+          "How can we solve this?",
+          "Cancel",
+          null,
+          "Get new password",
+          "Show me my hint",
+          "Delete account"));
+    }
 }
