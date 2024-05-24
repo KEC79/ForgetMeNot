@@ -1,36 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ForgetMeNot.View.MainPage">
+<ContentPage
+    x:Class="ForgetMeNot.View.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Main">
 
     <ScrollView>
         <VerticalStackLayout>
-            <Label 
+            <Label
                 x:Name="HelloLabel"
+                Margin="20"
+                Padding="10"
                 BackgroundColor="Red"
                 FontAttributes="Bold"
                 FontSize="Small"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
                 LineBreakMode="WordWrap"
-                Margin="20"
                 MaxLines="5"
-                Padding="10"
                 Text="{Binding FullName}"
                 TextColor="Yellow"
-                VerticalTextAlignment="Center"/>
+                VerticalTextAlignment="Center" />
             <Image
                 HeightRequest="200"
-                IsVisible="{Binding FlowerIsVisible}"
                 HorizontalOptions="Center"
+                IsVisible="{Binding FlowerIsVisible}"
                 Source="{Binding FavoriteFlower}">
                 <Image.GestureRecognizers>
-                    <TapGestureRecognizer
-                        Command="{Binding ImageTappedCommand}"
-                        NumberOfTapsRequired="1" />
+                    <TapGestureRecognizer Command="{Binding ImageTappedCommand}" NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
             <Button
+                Padding="5"
                 BackgroundColor="Red"
                 BorderColor="Black"
                 BorderWidth="2"
@@ -38,7 +39,6 @@
                 CornerRadius="20"
                 FontSize="Small"
                 HeightRequest="35"
-                Padding="5"
                 Text="Click Me"
                 TextColor="Yellow"
                 WidthRequest="150" />
